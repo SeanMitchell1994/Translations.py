@@ -5,8 +5,9 @@ class Trans:
     def __init__(self):
         self.exists = True
 
-    def rotate_x_2d(self, alpha):
-        return 0
+    def rotate_2d(self, alpha):
+        rotation_matrix = np.array([[np.cos(alpha), np.sin(alpha)], [-np.sin(alpha), np.cos(alpha)]])
+        return rotation_matrix
 
     def rotate_y_2d(self, beta):
         return 0
