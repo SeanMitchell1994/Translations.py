@@ -26,14 +26,10 @@ class Trans:
         rotation_matrix = np.array([[np.cos(gamma), -np.sin(gamma), 0], [np.sin(gamma), np.cos(gamma), 0], [0, 0, 1]])
         return rotation_matrix
 
-    def translate_x(b):
-        return 0
-
-    def translate_y(b):
-        return 0
-
-    def translate_z(b):
-        return 0
+    def translate(self, translation, matrix):
+        translated_matrix = np.dot(translation, matrix)
+        #return 0
+        return translated_matrix
 
     def homogenous_transform(rotation, translation):
         return 0
