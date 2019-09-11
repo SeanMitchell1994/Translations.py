@@ -12,14 +12,20 @@ class Trans:
         return rotation_matrix
     
     def rotate_x_3d(self, alpha):
+        # rotates an axis in a 3d space for a given angle, alpha
+        # returns the rotation matrix for the given angle, alpha
         rotation_matrix = np.array([[1, 0, 0], [0, np.cos(alpha), -np.sin(alpha)], [0, np.sin(alpha), np.cos(alpha)]])
         return rotation_matrix
 
     def rotate_y_3d(self, beta):
+        # rotates an axis in a 3d space for a given angle, beta
+        # returns the rotation matrix for a given angle, beta
         rotation_matrix = np.array([[np.cos(beta), 0, np.sin(beta)], [0, 1, 0], [-np.sin(beta), 0, np.cos(beta)]])
         return rotation_matrix
 
     def rotate_z_3d(self, gamma):
+        # rotates an axis in a 3d space for a given angle, gamma
+        # returns the rotation matrix for a given angle, gamma
         rotation_matrix = np.array([[np.cos(gamma), -np.sin(gamma), 0], [np.sin(gamma), np.cos(gamma), 0], [0, 0, 1]])
         return rotation_matrix
 
