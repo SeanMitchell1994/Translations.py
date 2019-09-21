@@ -23,6 +23,11 @@ class Trans:
         rotation_matrix = np.array([[np.cos(gamma), -np.sin(gamma), 0], [np.sin(gamma), np.cos(gamma), 0], [0, 0, 1]])
         return rotation_matrix
 
+    def rotation_matrix(self, matrix_a, matrix_b):
+        # Returns the matrix product of any two rotation matrices
+        rotation_matrix = np.dot(matrix_a, matrix_b)
+        return rotation_matrix
+
     def translate_x(b):
         return 0
 

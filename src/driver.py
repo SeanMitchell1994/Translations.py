@@ -9,3 +9,6 @@ print("\n3d rotation (y):")
 print(rotate_obj.rotate_y_3d(45))
 print("\n3d rotation (z):")
 print(rotate_obj.rotate_z_3d(45))
+
+print("\n")
+print(rotate_obj.rotation_matrix(rotate_obj.rotate_x_3d(45),rotate_obj.rotate_y_3d(45)))
