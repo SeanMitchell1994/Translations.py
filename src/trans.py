@@ -26,6 +26,10 @@ class Trans:
         rotation_matrix = np.array([[np.cos(gamma), -np.sin(gamma), 0], [np.sin(gamma), np.cos(gamma), 0], [0, 0, 1]])
         return rotation_matrix
 
+    def create_translation_matrix_3d(self, x = 0, y = 0, z = 0):
+        print("x: %s, y: %s, z: %s" % (str(x), str(y), str(z)))
+        return 0
+
     def translate(self, translation, matrix):
         translated_matrix = np.dot(translation, matrix)
         #return 0
