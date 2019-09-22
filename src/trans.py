@@ -27,15 +27,15 @@ class Trans:
         return rotation_matrix
 
     def create_translation_matrix_3d(self, x = 0, y = 0, z = 0):
-        print("x: %s, y: %s, z: %s" % (str(x), str(y), str(z)))
+        #print("x: %s, y: %s, z: %s" % (str(x), str(y), str(z)))
         displacement_vector = np.array([[x], [y], [z]])
-        print(displacement_vector)
-        return 0
+        #print(displacement_vector)
+        return displacement_vector
 
-    def translate(self, translation, matrix):
-        translated_matrix = np.dot(translation, matrix)
-        #return 0
-        return translated_matrix
+    #def translate(self, translation, matrix):
+    #    translated_matrix = np.dot(translation, matrix)
+    #    #return 0
+    #    return translated_matrix
 
     def homogenous_transform(rotation, translation):
         return 0
