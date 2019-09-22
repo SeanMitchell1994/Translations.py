@@ -28,6 +28,8 @@ class Trans:
 
     def create_translation_matrix_3d(self, x = 0, y = 0, z = 0):
         print("x: %s, y: %s, z: %s" % (str(x), str(y), str(z)))
+        displacement_vector = np.array([[x], [y], [z]])
+        print(displacement_vector)
         return 0
 
     def translate(self, translation, matrix):
