@@ -10,7 +10,7 @@ class Trans:
         # returns the rotation matrix for the given angle, theta
         rotation_matrix = np.array([[np.cos(theta), np.sin(theta)], [-np.sin(theta), np.cos(theta)]])
         return rotation_matrix
-    
+
     def rotate_x_3d(self, alpha):
         # rotates an axis in a 3d space for a given angle, alpha
         # returns the rotation matrix for the given angle, alpha
@@ -29,14 +29,21 @@ class Trans:
         rotation_matrix = np.array([[np.cos(gamma), -np.sin(gamma), 0], [np.sin(gamma), np.cos(gamma), 0], [0, 0, 1]])
         return rotation_matrix
 
-    def translate_x(b):
-        return 0
+    def rotation_matrix(self, matrix_a, matrix_b):
+        # Returns the matrix product of any two rotation matrices
+        rotation_matrix = np.dot(matrix_a, matrix_b)
+        return rotation_matrix
 
-    def translate_y(b):
-        return 0
+    def create_translation_matrix_3d(self, x = 0, y = 0, z = 0):
+        #print("x: %s, y: %s, z: %s" % (str(x), str(y), str(z)))
+        displacement_vector = np.array([[x], [y], [z]])
+        #print(displacement_vector)
+        return displacement_vector
 
-    def translate_z(b):
-        return 0
+    #def translate(self, translation, matrix):
+    #    translated_matrix = np.dot(translation, matrix)
+    #    #return 0
+    #    return translated_matrix
 
     def homogenous_transform(rotation, translation):
         return 0
