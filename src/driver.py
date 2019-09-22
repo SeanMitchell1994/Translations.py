@@ -1,12 +1,14 @@
 from trans import Trans
-import numpy as np
 
 rotate_obj = Trans()
-#print(rotate_obj.rotate_y_3d(30))
-#t =  np.array([[1, 2, 3]])
-#m = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
-#np.dot(m,t)
+print("2d rotation:")
+print(rotate_obj.rotate_2d(30))
+print("\n3d rotation (x):")
+print(rotate_obj.rotate_x_3d(45))
+print("\n3d rotation (y):")
+print(rotate_obj.rotate_y_3d(45))
+print("\n3d rotation (z):")
+print(rotate_obj.rotate_z_3d(45))
 
-#print(Trans.translate(t, m))
-
-rotate_obj.create_translation_matrix_3d(x=1,y=9,z=5)
+print("\n")
+print(rotate_obj.rotation_matrix(rotate_obj.rotate_x_3d(45),rotate_obj.rotate_y_3d(45)))
